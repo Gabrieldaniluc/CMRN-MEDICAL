@@ -144,7 +144,7 @@ inclusiv servicii medicale în contract cu CNAS.
 
         <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-6">
           {services.map(([Icon, title, text]) => (
-            <div key={title} className="w-[260px] rounded-3xl border border-teal-100 bg-white p-6 text-center shadow-sm">
+            <div key={String(title)} className="w-[260px] rounded-3xl border border-teal-100 bg-white p-6 text-center shadow-sm">
               <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#e9fbf9]">
                 <Icon size={42} strokeWidth={2.2} className="text-[#079b96]" />
               </div>
