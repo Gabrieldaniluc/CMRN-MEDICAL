@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { LucideIcon } from "lucide-react";
 
 import {
   Stethoscope,
@@ -10,10 +11,10 @@ import {
   PersonStanding,
   Dumbbell,
   Accessibility,
-  HeartPulse
+  HeartPulse,
 } from "lucide-react";
 
-const services = [
+const services: [LucideIcon, string, string][] = [
   [Stethoscope, "CONSULTAȚII", "Consultații de medicină fizică și reabilitare medicală"],
   [ClipboardList, "EVALUARE", "Evaluare și diagnostic funcțional"],
   [Accessibility, "COLOANĂ VERTEBRALĂ", "Tratamentul afecțiunilor coloanei vertebrale"],
@@ -33,15 +34,6 @@ const doctors = [
   ["Dr. Diac Georgeta", "Medicină fizică de reabilitare și medicină sportivă"],
 ];
 
-function MedicalIcon() {
-  return (
-    <svg viewBox="0 0 64 64" className="h-16 w-16 text-[#079b96]" fill="none" stroke="currentColor" strokeWidth="3">
-      <circle cx="32" cy="32" r="24" />
-      <path d="M32 18v28M18 32h28" />
-    </svg>
-  );
-}
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-[#06233f]">
@@ -60,11 +52,12 @@ export default function Home() {
             <a href="#doctori">DOCTORI</a>
             <a href="#contact">CONTACT</a>
             <a
-  href="https://www.google.com/maps/place/Strada+Hatman+%C8%98endrea+2,+700613+Ia%C8%99i/@47.1514019,27.5685444,17z/data=!3m1!4b1!4m6!3m5!1s0x40cafb0bc460a71b:0x309f27f0d7b90bac!8m2!3d47.1514493!4d27.5711735!16s%2Fg%2F11bw3zmysv?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
-  target="_blank"
->
-  LOCALIZARE
-</a>
+              href="https://www.google.com/maps/place/Strada+Hatman+%C8%98endrea+2,+700613+Ia%C8%99i/@47.1514019,27.5685444,17z/data=!3m1!4b1!4m6!3m5!1s0x40cafb0bc460a71b:0x309f27f0d7b90bac!8m2!3d47.1514493!4d27.5711735!16s%2Fg%2F11bw3zmysv?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LOCALIZARE
+            </a>
           </nav>
 
           <button className="rounded-full bg-[#079b96] px-7 py-3 font-black text-white shadow-lg">
@@ -97,71 +90,76 @@ export default function Home() {
           </p>
         </div>
       </section>
-<section id="despre" className="bg-white px-8 py-20">
-  <div className="mx-auto max-w-7xl">
 
-    <h2 className="text-center text-4xl font-black text-[#079b96]">
-      DESPRE NOI
-    </h2>
+      <section id="despre" className="bg-white px-8 py-20">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-center text-4xl font-black text-[#079b96]">
+            DESPRE NOI
+          </h2>
 
-    <div className="mx-auto mt-3 mb-10 h-1 w-16 bg-[#079b96]" />
+          <div className="mx-auto mt-3 mb-10 h-1 w-16 bg-[#079b96]" />
 
-    <div className="rounded-3xl bg-[#f7ffff] p-10 shadow-sm border border-teal-100">
+          <div className="rounded-3xl bg-[#f7ffff] p-10 shadow-sm border border-teal-100">
+            <p className="text-[20px] leading-10 text-[#12324d]">
+              Centrul Medical Recuperare Nicolina oferă servicii moderne de recuperare medicală,
+              fizioterapie, kinetoterapie și reabilitare funcțională, într-un spațiu dedicat
+              sănătății, mobilității și calității vieții pacienților noștri.
+              <br /><br />
+              Prin experiența echipei medicale și utilizarea unor metode moderne de evaluare
+              și tratament, centrul nostru urmărește recuperarea eficientă a afecțiunilor
+              neurologice, postoperatorii, posttraumatice și ale coloanei vertebrale,
+              adaptând fiecare plan terapeutic în funcție de nevoile individuale ale pacientului.
+              <br /><br />
+              Echipa medicală este formată din specialiști în medicină fizică de reabilitare,
+              reumatologie și medicină sportivă, având ca obiectiv restabilirea mobilității,
+              reducerea durerii și reintegrarea pacientului într-un stil de viață activ și echilibrat.
+              <br /><br />
+              În cadrul centrului sunt disponibile servicii de consultații medicale,
+              evaluare funcțională, fizioterapie, electroterapie, terapie manuală,
+              kinetoterapie personalizată și programe complete de recuperare,
+              inclusiv servicii medicale în contract cu CNAS.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <p className="text-[20px] leading-10 text-[#12324d]">
-Centrul Medical Recuperare Nicolina oferă servicii moderne de recuperare medicală,
-fizioterapie, kinetoterapie și reabilitare funcțională, într-un spațiu dedicat
-sănătății, mobilității și calității vieții pacienților noștri.
-
-<br /><br />
-
-Prin experiența echipei medicale și utilizarea unor metode moderne de evaluare
-și tratament, centrul nostru urmărește recuperarea eficientă a afecțiunilor
-neurologice, postoperatorii, posttraumatice și ale coloanei vertebrale,
-adaptând fiecare plan terapeutic în funcție de nevoile individuale ale pacientului.
-
-<br /><br />
-
-Echipa medicală este formată din specialiști în medicină fizică de reabilitare,
-reumatologie și medicină sportivă, având ca obiectiv restabilirea mobilității,
-reducerea durerii și reintegrarea pacientului într-un stil de viață activ și echilibrat.
-
-<br /><br />
-
-În cadrul centrului sunt disponibile servicii de consultații medicale,
-evaluare funcțională, fizioterapie, electroterapie, terapie manuală,
-kinetoterapie personalizată și programe complete de recuperare,
-inclusiv servicii medicale în contract cu CNAS.
-      </p>
-
-    </div>
-
-  </div>
-</section>
       <section id="servicii" className="bg-[#f7ffff] px-8 py-16">
-        <h2 className="text-center text-4xl font-black text-[#079b96]">SERVICII</h2>
+        <h2 className="text-center text-4xl font-black text-[#079b96]">
+          SERVICII
+        </h2>
+
         <div className="mx-auto mt-3 mb-10 h-1 w-16 bg-[#079b96]" />
 
         <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-6">
-          {services.map(([Icon, title, text]: any) => (
-            <div key={String(title)} className="w-[260px] rounded-3xl border border-teal-100 bg-white p-6 text-center shadow-sm">
+          {services.map(([Icon, title, text]) => (
+            <div
+              key={title}
+              className="w-[260px] rounded-3xl border border-teal-100 bg-white p-6 text-center shadow-sm"
+            >
               <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#e9fbf9]">
                 <Icon size={42} strokeWidth={2.2} className="text-[#079b96]" />
               </div>
-              <h3 className="font-black text-[#079b96]">{String(title)}</h3>
-              <p className="mt-3 text-sm leading-6">{String(text)}</p>
+
+              <h3 className="font-black text-[#079b96]">{title}</h3>
+              <p className="mt-3 text-sm leading-6">{text}</p>
             </div>
           ))}
         </div>
       </section>
 
       <section id="doctori" className="px-8 py-16">
-        <h2 className="text-center text-4xl font-black text-[#079b96]">DOCTORI</h2>
+        <h2 className="text-center text-4xl font-black text-[#079b96]">
+          DOCTORI
+        </h2>
+
         <div className="mx-auto mt-3 mb-10 h-1 w-16 bg-[#079b96]" />
 
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
           {doctors.map(([name, spec]) => (
-            <div key={name} className="flex items-center gap-6 rounded-3xl border border-teal-100 bg-white p-8 shadow-sm">
+            <div
+              key={name}
+              className="flex items-center gap-6 rounded-3xl border border-teal-100 bg-white p-8 shadow-sm"
+            >
               <div className="h-24 w-24 rounded-full bg-[#c9f8f1]" />
               <div>
                 <h3 className="font-black text-[#079b96]">{name}</h3>
@@ -174,7 +172,10 @@ inclusiv servicii medicale în contract cu CNAS.
 
       <section id="contact" className="px-8 pb-16">
         <div className="mx-auto max-w-7xl rounded-3xl bg-[#e9fbf9] p-10">
-          <h2 className="text-center text-4xl font-black text-[#079b96]">CONTACT</h2>
+          <h2 className="text-center text-4xl font-black text-[#079b96]">
+            CONTACT
+          </h2>
+
           <div className="mx-auto mt-3 mb-10 h-1 w-16 bg-[#079b96]" />
 
           <div className="grid gap-8 md:grid-cols-4">
