@@ -148,8 +148,8 @@ inclusiv servicii medicale în contract cu CNAS.
               <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#e9fbf9]">
                 <Icon size={42} strokeWidth={2.2} className="text-[#079b96]" />
               </div>
-              <h3 className="font-black text-[#079b96]">{title}</h3>
-              <p className="mt-3 text-sm leading-6">{text}</p>
+              <h3 className="font-black text-[#079b96]">{String(title)}</h3>
+              <p className="mt-3 text-sm leading-6">{String(text)}</p>
             </div>
           ))}
         </div>
